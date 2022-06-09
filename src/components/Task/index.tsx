@@ -1,13 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import { ITask, moveTask, removeTask } from "../../redux/tasks";
+import { ITask, removeTask } from "../../redux/tasks";
 import './Task.css'
 
 type TaskProps = ITask & {
     onDragStart: (e: React.DragEvent<HTMLDivElement>) => void
 };
 
-const Task = ({ id, label, onDragStart }: TaskProps) => {
+const Task: React.FC<TaskProps> = ({ id, label, onDragStart }) => {
     const dispatch = useDispatch()
 
     const [drag, setDrag] = useState(false)

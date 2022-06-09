@@ -6,6 +6,26 @@
   padding: 2rem;
 }
 
+.App, * {
+  transition: all .2s;
+}
+
+.App-dark {
+  background: linear-gradient(to right, #20242A, #242930);
+}
+
+.theme-btn {
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+}
+
+.github-btn {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+}
+
 .container {
   width: 80%;
   border-radius: 5px;
@@ -16,6 +36,18 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.App-dark .container {
+  border-color: #fefefe11;
+}
+
+.App-dark .title {
+  color: #fefefe;
+}
+
+.App-light .title {
+  color: #2a2a2a;
 }
 
 .center {
@@ -33,6 +65,16 @@
   gap: 1rem;
 
   border: 1px solid #0003;
+
+  background-color: #fefefe11;
+}
+
+.App-dark .beautiful-input {
+  border-color: #fefefe11;
+}
+
+.App-dark .beautiful-input > input {
+  color: #fefefe;
 }
 
 .beautiful-input > i {
@@ -46,6 +88,8 @@
   border: 0;
   outline: 0;
   flex: 1;
+
+  background-color: transparent;
 }
 
 .no-tasks {
@@ -57,10 +101,21 @@
   font-size: 19px;
 }
 
+.App-dark .no-tasks {
+  color: #fefefe66;
+}
+
 .task-list {
   width: 70%;
   border: 1px solid #0003;
   border-radius: 5px;
   overflow: hidden;
   position: relative;
+
+  color: #2a2a2a;
+}
+
+.App-dark .task-list {
+  border-color: #fefefe11;
+  color: #fefefeaa;
 }

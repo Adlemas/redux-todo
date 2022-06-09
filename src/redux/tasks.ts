@@ -19,7 +19,8 @@ export type ITask = {
 export const taskSlice = createSlice({
     name: 'tasks',
     initialState: {
-        tasks: Array<ITask>()
+        tasks: Array<ITask>(),
+        value: ""
     },
     reducers: {
         addTask(state, action) {
